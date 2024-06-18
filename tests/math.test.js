@@ -38,3 +38,25 @@ it('should return correct sum if array of number strings provided', () => {
     // assertions
     expect(result).toBe(expectedResult);
 })
+
+it('should throw an error if function argument not passed', () => {
+    // try {
+    //     const result = add();
+    // } catch (error) {
+    //     expect(error).toBeDefined()
+    // }
+
+    const resultFn = () => {
+        add();
+    }
+
+    expect(resultFn).toThrow();
+})
+
+// it('should throw an error if multiple argument passed', () => {
+//     const resultFn = () => {
+//         add(1, 2, 3);
+//     }
+
+//     expect(resultFn).toThrow(/Function expects exactly one array arguments/i);
+// })
